@@ -35,9 +35,9 @@ base_controller:
     i_clamp: 0.0
 
   wheel_pid_gains: &wheel_pid_gains
-    p: 12
-    d: 0.01
-    i: 10
+    p: 100
+    d: 11
+    i: 0
     i_clamp: 1.0
     i_clamp_max: 1.0
     i_clamp_min: -1.0
@@ -86,6 +86,9 @@ base_controller:
    y: 2.0 
   max_rotational_acceleration: 2.0
   state_publish_rate: 0.25
+
+  feedforward_trans: 0.005
+  feedforward_rot: 0.025
 
   max_translational_velocity: 1.0 
   max_rotational_velocity: 2.0
